@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  cloudreve:
+    image: xavierniu/cloudreve:latest
+    container_name: cloudreve
+    restart: always
+    volumes:
+        - ./data/uploads:/cloudreve/uploads
+        - ./data/conf.ini:/cloudreve/conf.ini
+        - ./data/cloudreve.db:/cloudreve/cloudreve.db
+    env_file: 
+        - config.env
+    ports:
+        - "5212:5212"
