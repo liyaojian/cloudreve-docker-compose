@@ -6,3 +6,4 @@
 ```
 docker-compose up -d
 ```
+- 访问 `ip:5212`
